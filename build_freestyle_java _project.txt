@@ -1,0 +1,33 @@
+ Install Jenkins
+1.go to Jenkins official page   https://jenkins.io/download/  and   download  Long term support release (LTS) software compatible  with your OS
+2.for windows, unzip downloaded package and double click on Jenkins.msi
+3.choose the location and click on next
+4.after installing Jenkins , you will be able to access Jenkins through browser using location specified during installation
+By default it  would be 8080
+http://localhost:8080/ 
+5.we need initialization password to setup Jenkins for first time
+Go to  c drive->programing files->Jenkins->secrets->initialization password
+Copy the password  and use it to set up Jenkins
+6.you will get to options to setup Jenkins .– one with suggested plugins and other one with selected plugins
+Better to select suggested plugins ,
+7.set password and user name
+
+Build Freestyle Project
+Log on to Jenkins  using url  http://localhost:8080/ 
+Select a new item
+ Enter project name and description ,select type of project (here I am selecting freestyle project)
+Select git in source management and provide git url for source code
+Click on Add build step
+For simple java application select “Execute Windows batch command “ and add following comands
+
+set PATH="C:\Program Files\Java\jdk1.8.0_111\bin"
+
+ javac HelloWorld.java
+java HelloWorld
+
+7.click on apply and save
+Now  click on bulild  , we can see the console output
+
+
+	
+ 	
